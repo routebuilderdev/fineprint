@@ -41,7 +41,9 @@ On the first “Read it” click the app calls `initializeDeviceModel()` inside 
 
 ## On-device requirements and the one manual step
 
-Chrome **Desktop** 139+ (Linux, Windows, macOS, ChromeOS) with `chrome://flags/#prompt-api-for-gemini-nano-multimodal-input` set to **Enabled**, ~22 GB free disk, and either >4 GB VRAM or 16 GB RAM with 4+ cores. Chrome on Android/iOS cannot run this.
+Chrome **Desktop** 139 or newer (Linux, Windows, macOS, ChromeOS), ~22 GB free disk, and either >4 GB VRAM or 16 GB RAM with 4+ cores. Chrome on Android/iOS cannot run this.
+
+The flag that enables the model has been renamed. On Chrome 139–157 it is `chrome://flags/#prompt-api-for-gemini-nano-multimodal-input` set to **Enabled**; on 158 and later that ID is gone and four separate flags replace it — see the table below before you go looking for the old one.
 
 Two commands, in order:
 
@@ -53,9 +55,9 @@ npm run spike            # terminal 2 — measures it, writes spike-output.json
 
 `install-model` keeps one browser alive and re-triggers the component update, because an interrupted download does not resume by itself (Chromium issue 444200731). It prints progress every 10 s and exits when the weights are on disk. The profile at `.chrome-profile/` is gitignored, so this cost is paid once.
 
-### Chrome 158 flag names (the docs are out of date)
+### Flag names on Chrome 158 and later
 
-`chrome://flags/#prompt-api-for-gemini-nano-multimodal-input` no longer exists. On Chrome 158 the real IDs are:
+`chrome://flags/#prompt-api-for-gemini-nano-multimodal-input` no longer exists there, which is why the older guides send you to a flag that isn't listed. On Chrome 158 the real IDs are:
 
 | Flag id | Value |
 |---|---|
@@ -258,7 +260,7 @@ The cloud read fails closed. `npm run verify:cloud` with no `VITE_FIREBASE_*` co
 
 ## Deploy
 
-The app is a static `vite build` output; deploy notes are kept in the private workspace. Nothing in this repo authenticates on your behalf.
+`npm run build` writes a static `dist/` — copy it to any static host. If you use Firebase Hosting, `firebase.json` is included, but run `firebase use --add` first: no `.firebaserc` is committed, so the CLI has no project to deploy to. A hosted build also needs a reCAPTCHA v3 site key for App Check, otherwise the cloud second read fails attestation. Serving on `localhost` needs none of that. Nothing in this repo authenticates on your behalf.
 
 ## License
 
