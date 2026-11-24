@@ -2,6 +2,8 @@
 
 **Understand the letter before you sign it — privately.**
 
+**[▶ 2:24 demo — real on-device model, then the cloud leg](https://youtu.be/w3wMmS6IJn0)** — one continuous take, no staged screenshots.
+
 Point Fine Print at an official letter (insurance denial, lease addendum, benefit notice, bill, parking penalty). It reads it **on your device** and returns a deadline, the actions it wants from you, and the references to quote. Anything the on-device model is unsure about is redacted and sent to Gemini for a second read — and the app shows you exactly how many characters left your machine.
 
 Built for **#BuildHybridAI 2026** using hybrid inference: Gemini Nano 4 in Chrome for the reading, Gemini in the cloud only for the fields it is unsure about. Firebase AI Logic is used when configured; the same on-device model is reachable directly otherwise.
