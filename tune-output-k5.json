@@ -1,0 +1,652 @@
+{
+  "ranAt": "2026-11-23T17:15:45.452Z",
+  "k": 5,
+  "source": "ON_DEVICE",
+  "schemaVersion": "denial,lease,benefit,bill,fine,tax,immigration,other",
+  "letters": [
+    {
+      "id": "denial",
+      "truth": {
+        "documentType": "denial",
+        "deadline": "2027-01-19",
+        "actions": [
+          "Send a written statement",
+          "Send the itemised bill"
+        ],
+        "references": [
+          "88-4419-02",
+          "4021-7788-1"
+        ]
+      },
+      "samples": [
+        {
+          "raw": "{\"documentType\": \"denial\", \"deadline\": \"2027-01-19\", \"actions\": [\"Send a written statement\", \"Send the itemised bill\", \"Quote claim number on all pages\"], \"references\": [\"Claim 88-4419-02\", \"Policy 4021-7788-1\", \"PO Box 4412, Springfield\", \"+1 (555) 010-4477\"]}",
+          "parsed": {
+            "documentType": "denial",
+            "deadline": "2027-01-19",
+            "actions": [
+              "Send a written statement",
+              "Send the itemised bill",
+              "Quote claim number on all pages"
+            ],
+            "references": [
+              "Claim 88-4419-02",
+              "Policy 4021-7788-1",
+              "PO Box 4412, Springfield",
+              "+1 (555) 010-4477"
+            ]
+          },
+          "error": null,
+          "latencyMs": 6877
+        },
+        {
+          "raw": "{\n\"documentType\": \"denial\",\n\"deadline\": \"2027-01-19\",\n\"actions\": [\n\"Request an internal review.\",\n\"Send a written statement and the itemised bill.\",\n\"Quote claim 88-4419-02 on every page.\"\n],\n\"references\": [\n\"Claim 88-4419-02\",\n\"Policy 4021-7788-1\",\n\"PO Box 4412, Springfield\",\n\"+1 (555) 010-4477\"\n]\n}",
+          "parsed": {
+            "documentType": "denial",
+            "deadline": "2027-01-19",
+            "actions": [
+              "Request an internal review.",
+              "Send a written statement and the itemised bill.",
+              "Quote claim 88-4419-02 on every page."
+            ],
+            "references": [
+              "Claim 88-4419-02",
+              "Policy 4021-7788-1",
+              "PO Box 4412, Springfield",
+              "+1 (555) 010-4477"
+            ]
+          },
+          "error": null,
+          "latencyMs": 1545
+        },
+        {
+          "raw": "{\n\"documentType\": \"denial\",\n\"deadline\": \"2027-01-19\",\n\"actions\": [\n\"Request an internal review.\",\n\"Send a written statement.\",\n\"Send the itemised bill.\"\n],\n\"references\": [\n\"Claim 88-4419-02\",\n\"Policy 4021-7788-1\",\n\"PO Box 4412, Springfield\",\n\"+1 (555) 010-4477\"\n]\n}",
+          "parsed": {
+            "documentType": "denial",
+            "deadline": "2027-01-19",
+            "actions": [
+              "Request an internal review.",
+              "Send a written statement.",
+              "Send the itemised bill."
+            ],
+            "references": [
+              "Claim 88-4419-02",
+              "Policy 4021-7788-1",
+              "PO Box 4412, Springfield",
+              "+1 (555) 010-4477"
+            ]
+          },
+          "error": null,
+          "latencyMs": 1390
+        },
+        {
+          "raw": "{\n  \"documentType\": \"denial\",\n  \"deadline\": \"2027-01-19\",\n  \"actions\": [\n    \"Request an internal review.\",\n    \"Send a written statement and itemized bill.\",\n    \"Quote claim 88-4419-02 on every page.\"\n  ],\n  \"references\": [\n    \"Claim 88-4419-02\",\n    \"Policy 4021-7788-1\",\n    \"PO Box 4412, Springfield\",\n    \"+1 (555) 010-4477\"\n  ]\n}",
+          "parsed": {
+            "documentType": "denial",
+            "deadline": "2027-01-19",
+            "actions": [
+              "Request an internal review.",
+              "Send a written statement and itemized bill.",
+              "Quote claim 88-4419-02 on every page."
+            ],
+            "references": [
+              "Claim 88-4419-02",
+              "Policy 4021-7788-1",
+              "PO Box 4412, Springfield",
+              "+1 (555) 010-4477"
+            ]
+          },
+          "error": null,
+          "latencyMs": 1653
+        },
+        {
+          "raw": "{\n  \"documentType\": \"denial\",\n  \"deadline\": \"2027-01-19\",\n  \"actions\": [\n    \"Send a written statement.\",\n    \"Send the itemised bill to the address.\",\n    \"Fax the information to +1 (555) 010-4477.\"\n  ],\n  \"references\": [\n    \"Claim 88-4419-02\",\n    \"Policy 4021-7788-1\",\n    \"PO Box 4412, Springfield\",\n    \"+1 (555) 010-4477\"\n  ]\n}",
+          "parsed": {
+            "documentType": "denial",
+            "deadline": "2027-01-19",
+            "actions": [
+              "Send a written statement.",
+              "Send the itemised bill to the address.",
+              "Fax the information to +1 (555) 010-4477."
+            ],
+            "references": [
+              "Claim 88-4419-02",
+              "Policy 4021-7788-1",
+              "PO Box 4412, Springfield",
+              "+1 (555) 010-4477"
+            ]
+          },
+          "error": null,
+          "latencyMs": 1694
+        }
+      ]
+    },
+    {
+      "id": "lease",
+      "truth": {
+        "documentType": "lease",
+        "deadline": "2026-12-15",
+        "actions": [
+          "Confirm acceptance in writing"
+        ],
+        "references": [
+          "2026/114"
+        ]
+      },
+      "samples": [
+        {
+          "raw": "{\n\"documentType\": \"lease\",\n\"deadline\": \"2026-12-15\",\n\"actions\": [\n\"Review clause 7 of the tenancy agreement.\",\n\"Write and send written acceptance.\",\n\"Quote tenancy reference 2026/114.\"\n],\n\"references\": [\n\"tenancy reference 2026/114\",\n\"tenant@harbour-lettings.example.\",\n\"12 Quay Street\",\n\"Flat 3, 44 Bridge Road\"\n]\n}",
+          "parsed": {
+            "documentType": "lease",
+            "deadline": "2026-12-15",
+            "actions": [
+              "Review clause 7 of the tenancy agreement.",
+              "Write and send written acceptance.",
+              "Quote tenancy reference 2026/114."
+            ],
+            "references": [
+              "tenancy reference 2026/114",
+              "tenant@harbour-lettings.example.",
+              "12 Quay Street",
+              "Flat 3, 44 Bridge Road"
+            ]
+          },
+          "error": null,
+          "latencyMs": 1322
+        },
+        {
+          "raw": "{\n  \"documentType\": \"lease\",\n  \"deadline\": \"2026-12-15\",\n  \"actions\": [\n    \"Confirm acceptance in writing.\",\n    \"Send confirmation to tenant@harbour-lettings.example.\",\n    \"Quote tenancy reference 2026/114.\"\n  ],\n  \"references\": [\n    \"tenancy reference 2026/114\",\n    \"tenant@harbour-lettings.example\"\n  ]\n}",
+          "parsed": {
+            "documentType": "lease",
+            "deadline": "2026-12-15",
+            "actions": [
+              "Confirm acceptance in writing.",
+              "Send confirmation to tenant@harbour-lettings.example.",
+              "Quote tenancy reference 2026/114."
+            ],
+            "references": [
+              "tenancy reference 2026/114",
+              "tenant@harbour-lettings.example"
+            ]
+          },
+          "error": null,
+          "latencyMs": 1235
+        },
+        {
+          "raw": "{\n  \"documentType\": \"lease\",\n  \"deadline\": \"2026-12-15\",\n  \"actions\": [\n    \"Confirm written acceptance.\",\n    \"Send confirmation to tenant@harbour-lettings.example.\",\n    \"Quote tenancy reference 2026/114.\"\n  ],\n  \"references\": [\n    \"2026/114\",\n    \"tenant@harbour-lettings.example\"\n  ]\n}",
+          "parsed": {
+            "documentType": "lease",
+            "deadline": "2026-12-15",
+            "actions": [
+              "Confirm written acceptance.",
+              "Send confirmation to tenant@harbour-lettings.example.",
+              "Quote tenancy reference 2026/114."
+            ],
+            "references": [
+              "2026/114",
+              "tenant@harbour-lettings.example"
+            ]
+          },
+          "error": null,
+          "latencyMs": 1184
+        },
+        {
+          "raw": "{\n\"documentType\": \"lease\",\n\"deadline\": \"2026-12-15\",\n\"actions\": [\n\"Review clause 7 of the tenancy agreement.\",\n\"Send written acceptance by the deadline.\",\n\"Quote tenancy reference 2026/114.\"\n],\n\"references\": [\n\"2026/114\",\n\"tenant@harbour-lettings.example\"\n]\n}",
+          "parsed": {
+            "documentType": "lease",
+            "deadline": "2026-12-15",
+            "actions": [
+              "Review clause 7 of the tenancy agreement.",
+              "Send written acceptance by the deadline.",
+              "Quote tenancy reference 2026/114."
+            ],
+            "references": [
+              "2026/114",
+              "tenant@harbour-lettings.example"
+            ]
+          },
+          "error": null,
+          "latencyMs": 1076
+        },
+        {
+          "raw": "{\"documentType\":\"lease\",\"deadline\":\"2026-12-15\",\"actions\":[\"Confirm acceptance in writing.\",\"Send confirmation to the specified email.\",\"Quote tenancy reference 2026/114.\"],\"references\":[\"tenancy reference 2026/114\"]}",
+          "parsed": {
+            "documentType": "lease",
+            "deadline": "2026-12-15",
+            "actions": [
+              "Confirm acceptance in writing.",
+              "Send confirmation to the specified email.",
+              "Quote tenancy reference 2026/114."
+            ],
+            "references": [
+              "tenancy reference 2026/114"
+            ]
+          },
+          "error": null,
+          "latencyMs": 747
+        }
+      ]
+    },
+    {
+      "id": "bill",
+      "truth": {
+        "documentType": "bill",
+        "deadline": "2026-12-08",
+        "actions": [
+          "Pay the balance",
+          "Dispute in writing if wrong"
+        ],
+        "references": [
+          "INV-77321",
+          "441-2290"
+        ]
+      },
+      "samples": [
+        {
+          "raw": "{\n  \"documentType\": \"bill\",\n  \"deadline\": \"2026-12-08\",\n  \"actions\": [\n    \"Pay by the due date.\",\n    \"Quote invoice INV-77321 on payment.\",\n    \"Dispute the bill in writing within 30 days.\"\n  ],\n  \"references\": [\n    \"INV-77321\",\n    \"Account 441-2290\",\n    \"900 Ridgeway, Suite 200\"\n  ]\n}",
+          "parsed": {
+            "documentType": "bill",
+            "deadline": "2026-12-08",
+            "actions": [
+              "Pay by the due date.",
+              "Quote invoice INV-77321 on payment.",
+              "Dispute the bill in writing within 30 days."
+            ],
+            "references": [
+              "INV-77321",
+              "Account 441-2290",
+              "900 Ridgeway, Suite 200"
+            ]
+          },
+          "error": null,
+          "latencyMs": 1543
+        },
+        {
+          "raw": "{\n  \"documentType\": \"bill\",\n  \"deadline\": \"2026-12-08\",\n  \"actions\": [\n    \"Pay the invoice online.\",\n    \"Post a cheque quoting invoice INV-77321.\"\n  ],\n  \"references\": [\n    \"INV-77321\",\n    \"Account 441-2290\",\n    \"900 Ridgeway, Suite 200\"\n  ]\n}",
+          "parsed": {
+            "documentType": "bill",
+            "deadline": "2026-12-08",
+            "actions": [
+              "Pay the invoice online.",
+              "Post a cheque quoting invoice INV-77321."
+            ],
+            "references": [
+              "INV-77321",
+              "Account 441-2290",
+              "900 Ridgeway, Suite 200"
+            ]
+          },
+          "error": null,
+          "latencyMs": 1239
+        },
+        {
+          "raw": "{\n  \"documentType\": \"bill\",\n  \"deadline\": \"2026-12-08\",\n  \"actions\": [\n    \"Pay the invoice online.\",\n    \"Post a cheque quoting invoice INV-77321.\",\n    \"Dispute the bill in writing within 30 days.\"\n  ],\n  \"references\": [\n    \"INV-77321\",\n    \"Account 441-2290\",\n    \"900 Ridgeway, Suite 200\"\n  ]\n}",
+          "parsed": {
+            "documentType": "bill",
+            "deadline": "2026-12-08",
+            "actions": [
+              "Pay the invoice online.",
+              "Post a cheque quoting invoice INV-77321.",
+              "Dispute the bill in writing within 30 days."
+            ],
+            "references": [
+              "INV-77321",
+              "Account 441-2290",
+              "900 Ridgeway, Suite 200"
+            ]
+          },
+          "error": null,
+          "latencyMs": 1379
+        },
+        {
+          "raw": "{\n\"documentType\": \"bill\",\n\"deadline\": \"2026-12-08\",\n\"actions\": [\n\"Pay the bill online.\",\n\"Post a cheque quoting invoice INV-77321.\",\n\"Dispute the bill in writing within 30 days.\"\n],\n\"references\": [\n\"INV-77321\",\n\"Account 441-2290\",\n\"900 Ridgeway, Suite 200\",\n\"2026-11-02\"\n]\n}",
+          "parsed": {
+            "documentType": "bill",
+            "deadline": "2026-12-08",
+            "actions": [
+              "Pay the bill online.",
+              "Post a cheque quoting invoice INV-77321.",
+              "Dispute the bill in writing within 30 days."
+            ],
+            "references": [
+              "INV-77321",
+              "Account 441-2290",
+              "900 Ridgeway, Suite 200",
+              "2026-11-02"
+            ]
+          },
+          "error": null,
+          "latencyMs": 1371
+        },
+        {
+          "raw": "{\"documentType\": \"bill\", \"deadline\": \"2026-12-08\", \"actions\": [\"Pay the invoice online\", \"Post a cheque quoting invoice INV-77321\"], \"references\": [\"INV-77321\", \"Account 441-2290\"]}",
+          "parsed": {
+            "documentType": "bill",
+            "deadline": "2026-12-08",
+            "actions": [
+              "Pay the invoice online",
+              "Post a cheque quoting invoice INV-77321"
+            ],
+            "references": [
+              "INV-77321",
+              "Account 441-2290"
+            ]
+          },
+          "error": null,
+          "latencyMs": 790
+        }
+      ]
+    },
+    {
+      "id": "tax",
+      "truth": {
+        "documentType": "tax",
+        "deadline": "2027-01-31",
+        "actions": [
+          "Pay the amount due",
+          "File a formal objection if you disagree"
+        ],
+        "references": [
+          "CP-5012-88"
+        ]
+      },
+      "samples": [
+        {
+          "raw": "{\n  \"documentType\": \"tax\",\n  \"deadline\": \"2027-01-31\",\n  \"actions\": [\n    \"File a formal objection within 30 days.\",\n    \"Quote reference CP-5012-88 on all correspondence.\",\n    \"Ensure payment is made by the deadline.\"\n  ],\n  \"references\": [\n    \"CP-5012-88\"\n  ]\n}",
+          "parsed": {
+            "documentType": "tax",
+            "deadline": "2027-01-31",
+            "actions": [
+              "File a formal objection within 30 days.",
+              "Quote reference CP-5012-88 on all correspondence.",
+              "Ensure payment is made by the deadline."
+            ],
+            "references": [
+              "CP-5012-88"
+            ]
+          },
+          "error": null,
+          "latencyMs": 1103
+        },
+        {
+          "raw": "{\n    \"documentType\": \"tax\",\n    \"deadline\": \"2027-01-31\",\n    \"actions\": [\n        \"Obtain the assessment notice.\",\n        \"File a formal objection within 30 days.\",\n        \"Quote reference CP-5012-88 on all correspondence.\"\n    ],\n    \"references\": [\n        \"CP-5012-88\"\n    ]\n}",
+          "parsed": {
+            "documentType": "tax",
+            "deadline": "2027-01-31",
+            "actions": [
+              "Obtain the assessment notice.",
+              "File a formal objection within 30 days.",
+              "Quote reference CP-5012-88 on all correspondence."
+            ],
+            "references": [
+              "CP-5012-88"
+            ]
+          },
+          "error": null,
+          "latencyMs": 1082
+        },
+        {
+          "raw": "{\n  \"documentType\": \"bill\",\n  \"deadline\": \"2027-01-31\",\n  \"actions\": [\n    \"File a formal objection within 30 days.\",\n    \"Quote reference CP-5012-88 on all correspondence.\",\n    \"Prepare payment for the assessed amount.\"\n  ],\n  \"references\": [\n    \"CP-5012-88\"\n  ]\n}",
+          "parsed": {
+            "documentType": "bill",
+            "deadline": "2027-01-31",
+            "actions": [
+              "File a formal objection within 30 days.",
+              "Quote reference CP-5012-88 on all correspondence.",
+              "Prepare payment for the assessed amount."
+            ],
+            "references": [
+              "CP-5012-88"
+            ]
+          },
+          "error": null,
+          "latencyMs": 1099
+        },
+        {
+          "raw": "{\n  \"documentType\": \"tax\",\n  \"deadline\": \"2027-01-31\",\n  \"actions\": [\n    \"Gather your return documents.\",\n    \"Prepare to submit the return.\",\n    \"Note the reference number.\"\n  ],\n  \"references\": [\n    \"CP-5012-88\"\n  ]\n}",
+          "parsed": {
+            "documentType": "tax",
+            "deadline": "2027-01-31",
+            "actions": [
+              "Gather your return documents.",
+              "Prepare to submit the return.",
+              "Note the reference number."
+            ],
+            "references": [
+              "CP-5012-88"
+            ]
+          },
+          "error": null,
+          "latencyMs": 985
+        },
+        {
+          "raw": "{\n  \"documentType\": \"bill\",\n  \"deadline\": \"2027-01-31\",\n  \"actions\": [\n    \"File a formal objection within 30 days.\",\n    \"Quote reference CP-5012-88 on all correspondence.\",\n    \"Ensure payment reaches the office by the deadline.\"\n  ],\n  \"references\": [\n    \"CP-5012-88\"\n  ]\n}",
+          "parsed": {
+            "documentType": "bill",
+            "deadline": "2027-01-31",
+            "actions": [
+              "File a formal objection within 30 days.",
+              "Quote reference CP-5012-88 on all correspondence.",
+              "Ensure payment reaches the office by the deadline."
+            ],
+            "references": [
+              "CP-5012-88"
+            ]
+          },
+          "error": null,
+          "latencyMs": 1139
+        }
+      ]
+    },
+    {
+      "id": "benefit",
+      "truth": {
+        "documentType": "benefit",
+        "deadline": "2026-11-30",
+        "actions": [
+          "Complete the recertification interview",
+          "Bring proof of income"
+        ],
+        "references": [
+          "BX-2210-4471",
+          "555-0142"
+        ]
+      },
+      "samples": [
+        {
+          "raw": "{\n  \"documentType\": \"benefit\",\n  \"deadline\": \"2026-11-30\",\n  \"actions\": [\n    \"Call to book an interview.\",\n    \"Bring proof of income for October 2026.\",\n    \"Schedule the recertification interview now.\"\n  ],\n  \"references\": [\n    \"Case: BX-2210-4471\",\n    \"555-0142\"\n  ]\n}",
+          "parsed": {
+            "documentType": "benefit",
+            "deadline": "2026-11-30",
+            "actions": [
+              "Call to book an interview.",
+              "Bring proof of income for October 2026.",
+              "Schedule the recertification interview now."
+            ],
+            "references": [
+              "Case: BX-2210-4471",
+              "555-0142"
+            ]
+          },
+          "error": null,
+          "latencyMs": 1212
+        },
+        {
+          "raw": "{\n\"documentType\": \"benefit\",\n\"deadline\": \"2026-11-30\",\n\"actions\": [\n\"Call 555-0142 to book the interview.\",\n\"Bring proof of income for October 2026.\",\n\"Quote case BX-2210-4471.\"\n],\n\"references\": [\n\"BX-2210-4471\",\n\"555-0142\",\n\"2026-11-30\"\n]\n}",
+          "parsed": {
+            "documentType": "benefit",
+            "deadline": "2026-11-30",
+            "actions": [
+              "Call 555-0142 to book the interview.",
+              "Bring proof of income for October 2026.",
+              "Quote case BX-2210-4471."
+            ],
+            "references": [
+              "BX-2210-4471",
+              "555-0142",
+              "2026-11-30"
+            ]
+          },
+          "error": null,
+          "latencyMs": 1337
+        },
+        {
+          "raw": "{\n  \"documentType\": \"benefit\",\n  \"deadline\": \"2026-11-30\",\n  \"actions\": [\n    \"Call 555-0142 to book the interview.\",\n    \"Bring proof of income for October 2026.\",\n    \"Attend the office with photo identification.\"\n  ],\n  \"references\": [\n    \"BX-2210-4471\",\n    \"555-0142\"\n  ]\n}",
+          "parsed": {
+            "documentType": "benefit",
+            "deadline": "2026-11-30",
+            "actions": [
+              "Call 555-0142 to book the interview.",
+              "Bring proof of income for October 2026.",
+              "Attend the office with photo identification."
+            ],
+            "references": [
+              "BX-2210-4471",
+              "555-0142"
+            ]
+          },
+          "error": null,
+          "latencyMs": 1253
+        },
+        {
+          "raw": "{\n  \"documentType\": \"benefit\",\n  \"deadline\": \"2026-11-30\",\n  \"actions\": [\n    \"Call 555-0142 to book the interview.\",\n    \"Bring proof of income for October 2026.\",\n    \"Attend the office with photo identification.\"\n  ],\n  \"references\": [\n    \"Case: BX-2210-4471\",\n    \"555-0142\"\n  ]\n}",
+          "parsed": {
+            "documentType": "benefit",
+            "deadline": "2026-11-30",
+            "actions": [
+              "Call 555-0142 to book the interview.",
+              "Bring proof of income for October 2026.",
+              "Attend the office with photo identification."
+            ],
+            "references": [
+              "Case: BX-2210-4471",
+              "555-0142"
+            ]
+          },
+          "error": null,
+          "latencyMs": 1267
+        },
+        {
+          "raw": "{\n  \"documentType\": \"benefit\",\n  \"deadline\": \"2026-11-30\",\n  \"actions\": [\n    \"Call 555-0142 to book the interview.\",\n    \"Bring proof of income for October 2026.\",\n    \"Quote case BX-2210-4471.\"\n  ],\n  \"references\": [\n    \"BX-2210-4471\",\n    \"555-0142\",\n    \"Case BX-2210-4471\"\n  ]\n}",
+          "parsed": {
+            "documentType": "benefit",
+            "deadline": "2026-11-30",
+            "actions": [
+              "Call 555-0142 to book the interview.",
+              "Bring proof of income for October 2026.",
+              "Quote case BX-2210-4471."
+            ],
+            "references": [
+              "BX-2210-4471",
+              "555-0142",
+              "Case BX-2210-4471"
+            ]
+          },
+          "error": null,
+          "latencyMs": 1468
+        }
+      ]
+    },
+    {
+      "id": "fine",
+      "truth": {
+        "documentType": "fine",
+        "deadline": "2026-12-04",
+        "actions": [
+          "Pay the penalty",
+          "Contest the notice in writing"
+        ],
+        "references": [
+          "PK-448120"
+        ]
+      },
+      "samples": [
+        {
+          "raw": "{\n  \"documentType\": \"fine\",\n  \"deadline\": \"2026-12-04\",\n  \"actions\": [\n    \"Pay the penalty by the deadline.\",\n    \"Contest the notice in writing.\",\n    \"Quote penalty notice number PK-448120.\"\n  ],\n  \"references\": [\n    \"PK-448120\"\n  ]\n}",
+          "parsed": {
+            "documentType": "fine",
+            "deadline": "2026-12-04",
+            "actions": [
+              "Pay the penalty by the deadline.",
+              "Contest the notice in writing.",
+              "Quote penalty notice number PK-448120."
+            ],
+            "references": [
+              "PK-448120"
+            ]
+          },
+          "error": null,
+          "latencyMs": 1038
+        },
+        {
+          "raw": "{\n  \"documentType\": \"fine\",\n  \"deadline\": \"2026-12-04\",\n  \"actions\": [\n    \"Pay the penalty by the deadline.\",\n    \"Contact the payer to arrange payment.\",\n    \"If contesting, submit your written response.\"\n  ],\n  \"references\": [\n    \"PK-448120\"\n  ]\n}",
+          "parsed": {
+            "documentType": "fine",
+            "deadline": "2026-12-04",
+            "actions": [
+              "Pay the penalty by the deadline.",
+              "Contact the payer to arrange payment.",
+              "If contesting, submit your written response."
+            ],
+            "references": [
+              "PK-448120"
+            ]
+          },
+          "error": null,
+          "latencyMs": 996
+        },
+        {
+          "raw": "{\n  \"documentType\": \"fine\",\n  \"deadline\": \"2026-12-04\",\n  \"actions\": [\n    \"Pay the penalty.\",\n    \"Contest the notice in writing.\",\n    \"Quote notice number PK-448120.\"\n  ],\n  \"references\": [\n    \"PK-448120\"\n  ]\n}",
+          "parsed": {
+            "documentType": "fine",
+            "deadline": "2026-12-04",
+            "actions": [
+              "Pay the penalty.",
+              "Contest the notice in writing.",
+              "Quote notice number PK-448120."
+            ],
+            "references": [
+              "PK-448120"
+            ]
+          },
+          "error": null,
+          "latencyMs": 998
+        },
+        {
+          "raw": "{\n  \"documentType\": \"fine\",\n  \"deadline\": \"2026-12-04\",\n  \"actions\": [\n    \"Pay the penalty.\",\n    \"Write in writing to contest the notice.\",\n    \"Quote penalty notice number PK-448120.\"\n  ],\n  \"references\": [\n    \"PK-448120\"\n  ]\n}",
+          "parsed": {
+            "documentType": "fine",
+            "deadline": "2026-12-04",
+            "actions": [
+              "Pay the penalty.",
+              "Write in writing to contest the notice.",
+              "Quote penalty notice number PK-448120."
+            ],
+            "references": [
+              "PK-448120"
+            ]
+          },
+          "error": null,
+          "latencyMs": 1012
+        },
+        {
+          "raw": "{\n  \"documentType\": \"fine\",\n  \"deadline\": \"2026-12-04\",\n  \"actions\": [\n    \"Pay the penalty by the deadline.\",\n    \"Contest the notice in writing before the deadline.\",\n    \"Quote penalty notice PK-448120 in any correspondence.\"\n  ],\n  \"references\": [\n    \"PK-448120\"\n  ]\n}",
+          "parsed": {
+            "documentType": "fine",
+            "deadline": "2026-12-04",
+            "actions": [
+              "Pay the penalty by the deadline.",
+              "Contest the notice in writing before the deadline.",
+              "Quote penalty notice PK-448120 in any correspondence."
+            ],
+            "references": [
+              "PK-448120"
+            ]
+          },
+          "error": null,
+          "latencyMs": 1082
+        }
+      ]
+    }
+  ]
+}
